@@ -33,5 +33,25 @@ def amicable_pair_in_range(num):
             print(amicable_pair)
 
 
+def seek_amicable(ceiling):
+    """
+        advanced version
+    :param ceiling:
+    :return:
+    """
+    sum_list = [1 for i in range(ceiling + 1)]
+    for i in range(2, ceiling // 2 + 1):
+        j = 2 * i
+        while j <= ceiling:
+            sum_list[j] += i
+            j += i
+    # The minimum known amicable number is 220
+    # So starting from 220
+    for i in range(220, ceiling):
+        if ceiling >= sum_list[i] > i == sum_list[sum_list[i]]:
+            print("(%d, %d)" % (i, sum_list[i]))
+
+
 if __name__ == '__main__':
-    amicable_pair_in_range(3000)
+    # amicable_pair_in_range(3000)
+    seek_amicable(5000000)
