@@ -43,10 +43,11 @@ def seek_amicable(ceiling):
     # 1 is the true factor of all natural numbers, so initialization is 1
     sum_list = [1 for i in range(ceiling + 1)]
     for i in range(2, ceiling // 2 + 1):
+        # ignore itself, start next
         j = 2 * i
         while j <= ceiling:
             sum_list[j] += i
-            print("sum_list[%d] = %d" % (j, sum_list[j]))
+            # print("sum_list[%d] = %d" % (j, sum_list[j]))
             j += i
     # The minimum known amicable number is 220
     # So starting from 220
@@ -57,4 +58,4 @@ def seek_amicable(ceiling):
 
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
-    seek_amicable(285)
+    seek_amicable(3000)
