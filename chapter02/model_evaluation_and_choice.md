@@ -62,3 +62,12 @@
         于是,我们将D'用作训练集,D\D'("\\"表示集合减法)用作测试集
 ---
 
+#调参(parameter tuning)和最终模型
+```text
+    机器学习常包含两类参数:
+        1.算法的参数,亦称"超参数",数目常在10以内
+        2.模型的参数,数目可能很多,例如大型"深度学习"模型,甚至有上百亿个参数
+    数据:
+        1.train data: {training set, validation set}
+        2.test data: {test set}
+```
