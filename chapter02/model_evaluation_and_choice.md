@@ -71,3 +71,32 @@
         1.train data: {training set, validation set}
         2.test data: {test set}
 ```
+
+#性能度量(performance measure)<br/>
+```text
+    回归任务中,最常用的性能度量是"均方误差"(mean squared error)
+    错误度(error rate)
+    精度(accuracy)
+    查准率(precision)
+    查全率(recall)
+    F1
+    真正例(true positive; TP)
+    真反例(true negative; TN)
+    假正例(false positive; FP)
+    假反例(false negative; FN)
+        TP+TN+FP+FN=样例总数
+    查准率P和查全率R分别定义为:
+        P = TP / (TP + FP)
+        R = TP / (TP + FN)
+    ===================================
+    F1是基于查准率和查全率的调和平均(harmonic mean)定义的:
+        1/F1 = 0.5 * (1/P + 1/R)
+        ==> F1 = 2 * P * R / (P + R) = 2 * TP / (样例总数 + TP - TN)
+    F1的一般形式是Fβ,Fβ则是加权调和平均:
+        1/Fβ = (1 / (1 + β*β)) * (1/P + β*β/R)
+        ==> Fβ = (1 + β*β)*P*R/(β*β*P+R)
+        β > 0, 度量了查全率对查准率的相对重要性
+        β = 1, 即标准F1
+        β > 1, 查全率有更大影响
+        β < 1, 查准率有更大影响
+```
