@@ -100,4 +100,14 @@
         β > 1, 查全率有更大影响
         β < 1, 查准率有更大影响
     ROC与AUC
+        ROC: Receiver Operating Characteristic(受试者工作特征)
+        AUC: Area Under ROC Curve
+        ROC曲线
+            纵轴是真正例率(True Positive Rate, TPR)
+            横轴是假正例率(False Positive Rate, FPR)
+                TPR = TP/(TP+FN)
+                FPR = FP/(FP+TN)
+    代价敏感错误率与代价曲线
+
+
 ```
