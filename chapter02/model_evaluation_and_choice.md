@@ -108,6 +108,12 @@
                 TPR = TP/(TP+FN)
                 FPR = FP/(FP+TN)
     代价敏感错误率与代价曲线
-        代价敏感
-        代价曲线
+    比较校验
+        假设校验
+        交叉验证t校验
+        McNemar校验
+        Friedman校验
+        Nemenyi校验
+    偏差和方差
+        E(f;D) = bias²(x) + var(x) + ε²
 ```
