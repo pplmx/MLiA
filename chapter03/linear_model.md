@@ -1,2 +1,7 @@
 # Linear Model
     Linear model has good comprehensibility.
+## 线性回归(linear regression)
+- 均方误差<br/>
+几何意义,对应了欧氏距离(Euclidean distance)<br/>
+基于均方方差最小化来进行模型求解的方法称作"最小二乘法"(least square method)
+
