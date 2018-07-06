@@ -17,4 +17,9 @@
         对率函数是任意阶可导的凸函数.
 - 极大似然法(maximum likelihood method)
     - 对数似然(log-likelihood)
+## 线性判别分析(林near discriminant analysis, LDA)
+- 类内散度矩阵(within-class scatter matrix)
+- 类间散度矩阵(between-class scatter matrix)
+## 多分类学习
+
 
