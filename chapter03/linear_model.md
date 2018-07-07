@@ -21,5 +21,6 @@
 - 类内散度矩阵(within-class scatter matrix)
 - 类间散度矩阵(between-class scatter matrix)
 ## 多分类学习
+- test
 
 
