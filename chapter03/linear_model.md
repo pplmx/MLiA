@@ -22,7 +22,9 @@
 - 类间散度矩阵(between-class scatter matrix)
 ## 多分类学习
 - 纠错输出码(Error Correcting Output Codes)
-## 类别不平衡问题
+## 类别不平衡问题(class-imbalance)
+    类别不平衡学习的一个基本策略——"再缩放(rescaling)", <br/>
+    亦称"再平衡(rebalance)"
 
 
 
