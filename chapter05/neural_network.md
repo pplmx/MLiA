@@ -1,4 +1,5 @@
 # Neural Network
+## 神经元模型
         神经网络是由具有适应性的简单单元组成的广泛并行互连的网络, 它的组织能够
     模拟生物神经系统对真实世界物体所作出的交互反应
 
@@ -8,3 +9,8 @@
     "阈值"(threshold), 那么它就会被激活, 即"兴奋"起来, 向其它神经元发送化学物
     质
 [![M-P Neuron Model](https://i.loli.net/2018/07/22/5b5481fb7dfcd.jpg)](https://i.loli.net/2018/07/22/5b5481fb7dfcd.jpg)
+## 感知机(Perception)与多层网络
+    感知机由两层神经元组成, 输入层接收外界输入信号后传递给输出层, 输出层是M-P神经元, 亦称
+    "阈值逻辑单元"(threshold logic unit)
+
+
