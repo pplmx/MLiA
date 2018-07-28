@@ -21,6 +21,7 @@
 - 多层前馈神经网络(multi-layer feed-forward neural network)<br/>
 每层神经元与下一层神经元全互连, 神经元之间不存在同层连接, 也不存在跨层连接
 ## 误差逆传播算法(error BackPropagation)
+    BP是基于梯度下降算法
 
 
 
