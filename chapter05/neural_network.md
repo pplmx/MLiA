@@ -22,6 +22,8 @@
 每层神经元与下一层神经元全互连, 神经元之间不存在同层连接, 也不存在跨层连接
 ## 误差逆传播算法(error BackPropagation)
     BP是基于梯度下降(gradient descent)策略, 以目标的负梯度方向对参数进行调整.
+## 全局最小(global minimum)和局部最小(local minimum)
+
 
 
 
