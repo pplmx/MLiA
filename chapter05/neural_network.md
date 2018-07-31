@@ -23,6 +23,11 @@
 ## 误差逆传播算法(error BackPropagation)
     BP是基于梯度下降(gradient descent)策略, 以目标的负梯度方向对参数进行调整.
 ## 全局最小(global minimum)和局部最小(local minimum)
+    跳出"局部最小"的策略
+- 使用随机梯度下降
+- 使用模拟退火(simulated annealing)
+- 以多组不同参数值初始化多个神经网络, 按标准方法训练后, 取其中误差最小的解作为最终参数
+- 使用遗传算法(genetic algorithms)
 
 
 
