@@ -28,6 +28,8 @@
 - 使用模拟退火(simulated annealing)
 - 以多组不同参数值初始化多个神经网络, 按标准方法训练后, 取其中误差最小的解作为最终参数
 - 使用遗传算法(genetic algorithms)
+## 其他常见神经网络
+- RBF(Radial Basis Function, 径向基函数)网络
 
 
 
