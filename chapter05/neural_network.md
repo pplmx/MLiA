@@ -29,9 +29,10 @@
 - 以多组不同参数值初始化多个神经网络, 按标准方法训练后, 取其中误差最小的解作为最终参数
 - 使用遗传算法(genetic algorithms)
 ## 其他常见神经网络
-- RBF(Radial Basis Function, 径向基函数)网络
-
-
-
+- RBF(Radial Basis Function, 径向基函数)网络<br/>
+    一种单隐层前馈神经网络, 它使用径向基函数作为隐层神经元激活函数, <br/>
+    而输出层则是对隐层神经元输出的线性组合
+- ART(Adaptive Resonance Theory, 自适应谐振理论)网络<br/>
+- SOM(Self-Organizing Map, 自组织映射)网络<br/>
 
 
