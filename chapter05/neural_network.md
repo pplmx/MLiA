@@ -34,5 +34,8 @@
     而输出层则是对隐层神经元输出的线性组合
 - ART(Adaptive Resonance Theory, 自适应谐振理论)网络<br/>
 - SOM(Self-Organizing Map, 自组织映射)网络<br/>
+- 级联相关(Cascade-Correlation)网络<br/>
+- Elman网络<br/>
+- Boltzmann机<br/>
 
 
