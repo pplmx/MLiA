@@ -33,6 +33,10 @@
     一种单隐层前馈神经网络, 它使用径向基函数作为隐层神经元激活函数, <br/>
     而输出层则是对隐层神经元输出的线性组合
 - ART(Adaptive Resonance Theory, 自适应谐振理论)网络<br/>
+    竞争型学习(competitive learning)是神经网络中一种常用的无监督学习策略, 在使用该策略时, <br/>
+    网络的输出神经元相互竞争, 每一时刻仅有一个竞争获胜的神经元被激活, 其他神经元的状态被抑制. <br/>
+    这种机制亦称"胜者通吃(winner-take-all)"原则<br/>
+    ART是竞争学习的重要代表
 - SOM(Self-Organizing Map, 自组织映射)网络<br/>
 - 级联相关(Cascade-Correlation)网络<br/>
 - Elman网络<br/>
