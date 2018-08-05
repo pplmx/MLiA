@@ -36,7 +36,9 @@
     竞争型学习(competitive learning)是神经网络中一种常用的无监督学习策略, 在使用该策略时, <br/>
     网络的输出神经元相互竞争, 每一时刻仅有一个竞争获胜的神经元被激活, 其他神经元的状态被抑制. <br/>
     这种机制亦称"胜者通吃(winner-take-all)"原则<br/>
-    ART是竞争学习的重要代表
+    ART是竞争学习的重要代表, 可以好地缓解了竞争型学习中的"可塑性-稳定性窘境(stability-plasticity dilemma)"<br/>
+    可塑性是指神经网络要有学习新知识的能力, 而稳定性则是指神经网络在学习新知识时要保持对旧知识的记忆.<br/>
+    这就使得ART网络具有一个很重要的优点: 可进行增量学习(incremental learning)或在线学习(online learning)
 - SOM(Self-Organizing Map, 自组织映射)网络<br/>
 - 级联相关(Cascade-Correlation)网络<br/>
 - Elman网络<br/>
