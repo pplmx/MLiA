@@ -40,6 +40,7 @@
     可塑性是指神经网络要有学习新知识的能力, 而稳定性则是指神经网络在学习新知识时要保持对旧知识的记忆.<br/>
     这就使得ART网络具有一个很重要的优点: 可进行增量学习(incremental learning)或在线学习(online learning)
 - SOM(Self-Organizing Map, 自组织映射)网络<br/>
+    是一种竞争学习
 - 级联相关(Cascade-Correlation)网络<br/>
 - Elman网络<br/>
 - Boltzmann机<br/>
