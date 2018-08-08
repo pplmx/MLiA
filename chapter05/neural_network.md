@@ -44,6 +44,8 @@
     空间的拓扑结构, 即将高维空间中相似的样本点映射到网络输出层中的邻近神经元.
 - 级联相关(Cascade-Correlation)网络<br/>
 - Elman网络<br/>
+    与前馈神经网络不同, "递归神经网络(recurrent neural network)"允许网络中出现环形结构, 从而可让<br/>
+    一些神经元的输出反馈回来作为输入信号
 - Boltzmann机<br/>
 
 
