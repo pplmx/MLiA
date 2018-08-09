@@ -47,5 +47,6 @@
     与前馈神经网络不同, "递归神经网络(recurrent neural network)"允许网络中出现环形结构, 从而可让<br/>
     一些神经元的输出反馈回来作为输入信号
 - Boltzmann机<br/>
+    一种"基于能量的模型(energy-based model)"
 
 
