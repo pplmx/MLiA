@@ -48,5 +48,6 @@
     一些神经元的输出反馈回来作为输入信号
 - Boltzmann机<br/>
     一种"基于能量的模型(energy-based model)"
+    for test
 
 
