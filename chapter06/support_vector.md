@@ -7,4 +7,5 @@
     凸二次规划(convex quadratic programming)问题
 ## 核函数(kernel function)
 ## 软间隔(soft margin)与正则化
-
+## 支持向量回归(support vector regression)
+## 核方法(kernel methods)
