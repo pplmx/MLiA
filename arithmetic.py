@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 # @author  : mystic
 # @date    : 2018/6/11 20:22
+import numpy
+import time
+
+from nanotime import nanotime
+from numpy import random
 
 
 def is_amicable_number(num):
@@ -56,6 +61,62 @@ def seek_amicable(ceiling):
             print("( %d, %d )" % (i, sum_list[i]))
 
 
+def bubble_sort(unordered_set):
+    """
+
+    :param unordered_set:
+    :return:
+    """
+    set_len = len(unordered_set)
+    for i in range(set_len):
+        for j in range(i, set_len):
+            if unordered_set[i] < unordered_set[j]:
+                temp = unordered_set[i]
+                unordered_set[i] = unordered_set[j]
+                unordered_set[j] = temp
+    # for clear semantics
+    ordered_list = unordered_set
+    return ordered_list
+
+
+def selection_sort(unordered_set):
+    """
+
+    :param unordered_set:
+    :return:
+    """
+    set_len = len(unordered_set)
+    for i in range(set_len):
+        # assume the first one is the maximum
+        assume_max_idx = i
+        max_val = unordered_set[assume_max_idx]
+        for j in range(i + 1, set_len):
+            if max_val < unordered_set[j]:
+                assume_max_idx = j
+                max_val = unordered_set[assume_max_idx]
+        temp = unordered_set[i]
+        unordered_set[i] = unordered_set[assume_max_idx]
+        unordered_set[assume_max_idx] = temp
+    # for clear semantics
+    ordered_list = unordered_set
+    return ordered_list
+
+
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
-    seek_amicable(3000)
+    # seek_amicable(3000)
+
+    unsort_list = random.randint(1000, size=100)
+    print(unsort_list)
+
+    start_time = nanotime.nanoseconds(nanotime.now())
+    sorted_list = bubble_sort(unsort_list)
+    end_time = nanotime.nanoseconds(nanotime.now())
+    print('Bubble sort Used time: %dns' % (end_time - start_time))
+
+    start_time = nanotime.nanoseconds(nanotime.now())
+    sorted_list = selection_sort(unsort_list)
+    end_time = nanotime.nanoseconds(nanotime.now())
+    print('Selection sort Used time: %dns' % (end_time - start_time))
+
+    print(sorted_list)
