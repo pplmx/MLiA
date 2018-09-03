@@ -102,6 +102,20 @@ def selection_sort(unordered_set):
     return ordered_list
 
 
+def insertion_sort(unordered_set):
+    """
+
+    :param unordered_set:
+    :return:
+    """
+    set_len = len(unordered_set)
+
+    # for clear semantics
+    ordered_list = unordered_set
+    return ordered_list
+
+
+
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
