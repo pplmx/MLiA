@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 # @author  : mystic
 # @date    : 2018/6/11 20:22
-import numpy
-import time
 
 from nanotime import nanotime
 from numpy import random
@@ -71,9 +69,8 @@ def bubble_sort(unordered_set):
     for i in range(set_len):
         for j in range(i, set_len):
             if unordered_set[i] < unordered_set[j]:
-                temp = unordered_set[i]
-                unordered_set[i] = unordered_set[j]
-                unordered_set[j] = temp
+                # change each other
+                unordered_set[i], unordered_set[j] = unordered_set[j], unordered_set[i]
     # for clear semantics
     ordered_list = unordered_set
     return ordered_list
@@ -94,9 +91,8 @@ def selection_sort(unordered_set):
             if max_val < unordered_set[j]:
                 assume_max_idx = j
                 max_val = unordered_set[assume_max_idx]
-        temp = unordered_set[i]
-        unordered_set[i] = unordered_set[assume_max_idx]
-        unordered_set[assume_max_idx] = temp
+        # change each other
+        unordered_set[i], unordered_set[assume_max_idx] = unordered_set[assume_max_idx], unordered_set[i]
     # for clear semantics
     ordered_list = unordered_set
     return ordered_list
@@ -113,7 +109,6 @@ def insertion_sort(unordered_set):
     # for clear semantics
     ordered_list = unordered_set
     return ordered_list
-
 
 
 if __name__ == '__main__':
