@@ -105,6 +105,7 @@ def insertion_sort(unordered_set):
     :return:
     """
     set_len = len(unordered_set)
+    for i in range(set_len):
 
     # for clear semantics
     ordered_list = unordered_set
