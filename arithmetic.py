@@ -110,7 +110,7 @@ def insertion_sort(unordered_set):
         for j in range(i+1)[::-1]:
             if unordered_set[j] < unordered_set[i]:
                 unordered_set[i], unordered_set[j] = unordered_set[j], unordered_set[i]
-                print('(%d and %d) to (%d and %d)' % (unordered_set[i], unordered_set[j], unordered_set[j], unordered_set[i]))
+                # print('(%d and %d) to (%d and %d)' % (unordered_set[i], unordered_set[j], unordered_set[j], unordered_set[i]))
     # for clear semantics
     ordered_list = unordered_set
     return ordered_list
