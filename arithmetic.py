@@ -133,6 +133,10 @@ def quick_sort(array):
     return quick_sort(less) + [num] + quick_sort(greater)
 
 
+def shell_sort(array):
+    pass
+
+
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
