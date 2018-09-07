@@ -117,6 +117,22 @@ def insertion_sort(unordered_set):
     return ordered_list
 
 
+def quick_sort(array):
+    """
+
+    :param array:
+    :return:
+    """
+    arr_len = len(array)
+    if arr_len <= 1:
+        return array
+    # num = array[0]
+    num = array[random.randint(arr_len)]
+    less = [i for i in array[1:] if i <= num]
+    greater = [i for i in array[1:] if i > num]
+    return quick_sort(less) + [num] + quick_sort(greater)
+
+
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
@@ -128,15 +144,20 @@ if __name__ == '__main__':
     # sorted_list = bubble_sort(unsort_list)
     # end_time = nanotime.nanoseconds(nanotime.now())
     # print('Bubble sort Used time: %dns' % (end_time - start_time))
-    #
+
     # start_time = nanotime.nanoseconds(nanotime.now())
     # sorted_list = selection_sort(unsort_list)
     # end_time = nanotime.nanoseconds(nanotime.now())
     # print('Selection sort Used time: %dns' % (end_time - start_time))
 
+    # start_time = nanotime.nanoseconds(nanotime.now())
+    # sorted_list = insertion_sort(unsort_list)
+    # end_time = nanotime.nanoseconds(nanotime.now())
+    # print('Insertion sort Used time: %dns' % (end_time - start_time))
+
     start_time = nanotime.nanoseconds(nanotime.now())
-    sorted_list = insertion_sort(unsort_list)
+    sorted_list = quick_sort(unsort_list)
     end_time = nanotime.nanoseconds(nanotime.now())
-    print('Insertion sort Used time: %dns' % (end_time - start_time))
+    print('Quick sort Used time: %dns' % (end_time - start_time))
 
     print(sorted_list)
