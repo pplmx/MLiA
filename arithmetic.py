@@ -107,10 +107,11 @@ def insertion_sort(unordered_set):
     set_len = len(unordered_set)
     for i in range(set_len):
         # Use slices to implement reverse traversal
-        for j in range(i+1)[::-1]:
-            if unordered_set[j] < unordered_set[i]:
-                unordered_set[i], unordered_set[j] = unordered_set[j], unordered_set[i]
-                # print('(%d and %d) to (%d and %d)' % (unordered_set[i], unordered_set[j], unordered_set[j], unordered_set[i]))
+        for j in range(i)[::-1]:
+            if unordered_set[j + 1] < unordered_set[j]:
+                unordered_set[j], unordered_set[j + 1] = unordered_set[j + 1], unordered_set[j]
+            else:
+                break
     # for clear semantics
     ordered_list = unordered_set
     return ordered_list
