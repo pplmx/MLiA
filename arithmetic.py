@@ -134,7 +134,19 @@ def quick_sort(array):
 
 
 def shell_sort(array):
-    pass
+    """
+
+    :param array:
+    :return:
+    """
+    step = len(array) // 2
+    while step > 0:
+        for i in range(step, len(array)):
+            while i >= step and array[i] < array[i - step]:
+                array[i], array[i - step] = array[i - step], array[i]
+                i -= step
+        step //= 2
+    return array
 
 
 if __name__ == '__main__':
@@ -159,9 +171,14 @@ if __name__ == '__main__':
     # end_time = nanotime.nanoseconds(nanotime.now())
     # print('Insertion sort Used time: %dns' % (end_time - start_time))
 
+    # start_time = nanotime.nanoseconds(nanotime.now())
+    # sorted_list = quick_sort(unsort_list)
+    # end_time = nanotime.nanoseconds(nanotime.now())
+    # print('Quick sort Used time: %dns' % (end_time - start_time))
+
     start_time = nanotime.nanoseconds(nanotime.now())
-    sorted_list = quick_sort(unsort_list)
+    sorted_list = shell_sort(unsort_list)
     end_time = nanotime.nanoseconds(nanotime.now())
-    print('Quick sort Used time: %dns' % (end_time - start_time))
+    print('Shell sort Used time: %dns' % (end_time - start_time))
 
     print(sorted_list)
