@@ -149,6 +149,14 @@ def shell_sort(array):
     return array
 
 
+def heap_sort(array):
+    return array
+
+
+def merge_sort(array):
+    return array
+
+
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
