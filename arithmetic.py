@@ -139,12 +139,18 @@ def shell_sort(array):
     :param array:
     :return:
     """
-    step = len(array) // 2
+    arr_len = len(array)
+    step = arr_len // 2
     while step > 0:
-        for i in range(step, len(array)):
+        for i in range(step, arr_len):
             while i >= step and array[i] < array[i - step]:
                 array[i], array[i - step] = array[i - step], array[i]
                 i -= step
+            # for j in range(i)[::-step]:
+            #     if j >= step and array[j] < array[j - step]:
+            #         array[j], array[j - step] = array[j - step], array[j]
+            #     else:
+            #         break
         step //= 2
     return array
 
