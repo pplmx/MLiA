@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # @author  : mystic
 # @date    : 2018/6/11 20:22
+from collections import deque
 
 from nanotime import nanotime
 from numpy import random
@@ -156,7 +157,9 @@ def shell_sort(array):
 
 
 def heap_sort(array):
-    return array
+    linked_list = deque(array)
+
+    return [linked_list[i] for i in range(1, len(linked_list))]
 
 
 def merge_sort(array):
