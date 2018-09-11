@@ -157,12 +157,22 @@ def shell_sort(array):
 
 
 def heap_sort(array):
+    """
+
+    :param array:
+    :return:
+    """
     linked_list = deque(array)
 
     return [linked_list[i] for i in range(1, len(linked_list))]
 
 
 def merge_sort(array):
+    """
+
+    :param array:
+    :return:
+    """
     return array
 
 
