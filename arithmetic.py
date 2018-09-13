@@ -169,7 +169,7 @@ def heap_sort(array):
 
 def merge_sort(array):
     """
-
+        merge sort
     :param array:
     :return:
     """
