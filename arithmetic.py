@@ -158,7 +158,7 @@ def shell_sort(array):
 
 def heap_sort(array):
     """
-        heap sort
+
     :param array:
     :return:
     """
@@ -169,7 +169,7 @@ def heap_sort(array):
 
 def merge_sort(array):
     """
-        merge sort
+
     :param array:
     :return:
     """
