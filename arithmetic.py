@@ -120,7 +120,7 @@ def insertion_sort(unordered_set):
 
 def quick_sort(array):
     """
-
+        quick sort
     :param array:
     :return:
     """
@@ -136,7 +136,7 @@ def quick_sort(array):
 
 def shell_sort(array):
     """
-
+        shell sort
     :param array:
     :return:
     """
