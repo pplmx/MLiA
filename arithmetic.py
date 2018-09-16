@@ -147,7 +147,7 @@ def shell_sort(array):
             # while i >= step and array[i] < array[i - step]:
             #     array[i], array[i - step] = array[i - step], array[i]
             #     i -= step
-            for j in range(i+1)[::-step]:
+            for j in range(i + 1)[::-step]:
                 if j >= step and array[j] < array[j - step]:
                     array[j], array[j - step] = array[j - step], array[j]
                 else:
@@ -174,6 +174,17 @@ def merge_sort(array):
     :return:
     """
     return array
+
+
+def is_palindrome(x):
+    """
+
+    :param x:
+    :return:
+    """
+    if x < 0:
+        return False
+    return x == int(str(x)[::-1])
 
 
 if __name__ == '__main__':
