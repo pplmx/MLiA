@@ -178,7 +178,7 @@ def merge_sort(array):
 
 def is_palindrome(x):
     """
-        palindrome
+        is_palindrome
     :param x:
     :return:
     """
