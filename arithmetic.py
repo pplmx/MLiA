@@ -4,7 +4,6 @@
 # @date    : 2018/6/11 20:22
 from collections import deque
 
-from nanotime import nanotime
 from numpy import random
 
 
@@ -187,12 +186,39 @@ def is_palindrome(x):
     return x == int(str(x)[::-1])
 
 
+def two_sum(nums, target):
+    """
+
+    :param nums: list[int]
+    :param target: int
+    :return: list[int]
+    """
+    # Solution1: time complexity is too large
+    # arr_len = len(nums)
+    # for i in range(arr_len):
+    #     for j in range(i+1, arr_len):
+    #         if nums[i] + nums[j] == target:
+    #             return [i, j]
+    # return []
+
+    # Solution2:
+    arr_len = len(nums)
+    temp = {}
+    for i in range(arr_len):
+        minus = target - nums[i]
+        if minus not in temp:
+            temp[nums[i]] = i
+            continue
+        return [temp[minus], i]
+    return []
+
+
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
 
-    unsort_list = random.randint(1000, size=100)
-    print(unsort_list)
+    # unsort_list = random.randint(1000, size=100)
+    # print(unsort_list)
 
     # start_time = nanotime.nanoseconds(nanotime.now())
     # sorted_list = bubble_sort(unsort_list)
@@ -214,9 +240,11 @@ if __name__ == '__main__':
     # end_time = nanotime.nanoseconds(nanotime.now())
     # print('Quick sort Used time: %dns' % (end_time - start_time))
 
-    start_time = nanotime.nanoseconds(nanotime.now())
-    sorted_list = shell_sort(unsort_list)
-    end_time = nanotime.nanoseconds(nanotime.now())
-    print('Shell sort Used time: %dns' % (end_time - start_time))
+    # start_time = nanotime.nanoseconds(nanotime.now())
+    # sorted_list = shell_sort(unsort_list)
+    # end_time = nanotime.nanoseconds(nanotime.now())
+    # print('Shell sort Used time: %dns' % (end_time - start_time))
 
-    print(sorted_list)
+    # print(sorted_list)
+
+    print(two_sum([2, 343, 32, 21, 4332, 4], 34))
