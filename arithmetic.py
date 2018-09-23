@@ -228,9 +228,12 @@ def is_match(str, pattern):
 
 
 def is__match(text, pattern):
+    # if text and pattern are both empty string, return true
     if not pattern:
         return not text
 
+    # if text is not empty string, and the first character of pattern is the first of text or '.'
+    # return true
     first_match = bool(text) and pattern[0] in {text[0], '.'}
 
     if len(pattern) >= 2 and pattern[1] == '*':
@@ -274,6 +277,6 @@ if __name__ == '__main__':
 
     # print(sorted_list)
 
-    print(two_sum([2, 343, 32, 21, 4332, 4], 34))
+    # print(two_sum([2, 343, 32, 21, 4332, 4], 34))
 
-    print(is__match("friend", "fri.nd*"))
+    print(is__match("", ""))
