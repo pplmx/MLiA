@@ -213,21 +213,7 @@ def two_sum(nums, target):
     return []
 
 
-def is_match(str, pattern):
-    """
-
-    :param str:
-    :param pattern:
-    :return:
-    """
-    # lowercase = [chr(i) for i in range(97, 123)]
-    import string
-    lowercase = dict.fromkeys(string.ascii_lowercase, 0)
-    pattern_dict = dict.fromkeys(pattern, 0)
-    return True
-
-
-def is__match(text, pattern):
+def is_match(text, pattern):
     # if text and pattern are both empty string, return true
     if not pattern:
         return not text
@@ -237,10 +223,10 @@ def is__match(text, pattern):
     first_match = bool(text) and pattern[0] in {text[0], '.'}
 
     if len(pattern) >= 2 and pattern[1] == '*':
-        return (is__match(text, pattern[2:]) or
-                first_match and is__match(text[1:], pattern))
+        return (is_match(text, pattern[2:]) or
+                first_match and is_match(text[1:], pattern))
     else:
-        return first_match and is__match(text[1:], pattern[1:])
+        return first_match and is_match(text[1:], pattern[1:])
 
 
 if __name__ == '__main__':
@@ -279,4 +265,4 @@ if __name__ == '__main__':
 
     # print(two_sum([2, 343, 32, 21, 4332, 4], 34))
 
-    print(is__match("", ""))
+    print(is_match("", ""))
