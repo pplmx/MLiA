@@ -263,6 +263,6 @@ if __name__ == '__main__':
 
     # print(sorted_list)
 
-    # print(two_sum([2, 343, 32, 21, 4332, 4], 34))
+    print(two_sum([2, 343, 32, 21, 4332, 4], 34))
 
     print(is_match("", ""))
