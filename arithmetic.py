@@ -234,8 +234,8 @@ if __name__ == '__main__':
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
 
-    unsort_list = random.randint(1000, size=100)
-    print(unsort_list)
+    # unsort_list = random.randint(1000, size=100)
+    # print(unsort_list)
 
     # start_time = nanotime.nanoseconds(nanotime.now())
     # sorted_list = bubble_sort(unsort_list)
@@ -257,12 +257,12 @@ if __name__ == '__main__':
     # end_time = nanotime.nanoseconds(nanotime.now())
     # print('Quick sort Used time: %dns' % (end_time - start_time))
 
-    start_time = nanotime.nanoseconds(nanotime.now())
-    sorted_list = shell_sort(unsort_list)
-    end_time = nanotime.nanoseconds(nanotime.now())
-    print('Shell sort Used time: %dns' % (end_time - start_time))
+    # start_time = nanotime.nanoseconds(nanotime.now())
+    # sorted_list = shell_sort(unsort_list)
+    # end_time = nanotime.nanoseconds(nanotime.now())
+    # print('Shell sort Used time: %dns' % (end_time - start_time))
 
-    print(sorted_list)
+    # print(sorted_list)
 
     print(two_sum([2, 343, 32, 21, 4332, 4], 34))
 
