@@ -4,7 +4,6 @@
 # @date    : 2018/6/11 20:22
 from collections import deque
 
-import nanotime
 from numpy import random
 
 
@@ -228,6 +227,21 @@ def is_match(text, pattern):
                 first_match and is_match(text[1:], pattern))
     else:
         return first_match and is_match(text[1:], pattern[1:])
+
+
+def add(a: int, b: int) -> int:
+    """
+        implement the add function without add signal
+    :param a:
+    :param b:
+    :return:
+    """
+    while b != 0:
+        result = a ^ b
+        carry = (a & b) << 1
+        a = result
+        b = carry
+    return a
 
 
 if __name__ == '__main__':
