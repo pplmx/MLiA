@@ -183,6 +183,7 @@ def is_palindrome(x):
     """
     if x < 0:
         return False
+    # TODO
     return x == int(str(x)[::-1])
 
 
