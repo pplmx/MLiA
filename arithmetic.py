@@ -183,21 +183,21 @@ def is_palindrome(x):
     """
     if x < 0:
         return False
-    # TODO
+    # return x == int(str(x)[::-1])
     length = len(str(x))
     latter = ""
     temp = x
+    half_len = length // 2
+    for i in range(half_len):
+        latter += str(temp % 10)
+        temp = temp // 10
     if length % 2 == 0:
-        for i in range(length // 2):
-            latter += str(temp % 10)
-            temp = temp // 10
-        x = x // math.pow(10, length // 2)
+        # if x = 1234554321, then return x = (1234554321 // 10000)
+        x = x // math.pow(10, half_len)
     else:
-        for i in range(length // 2):
-            latter += str(temp % 10)
-            temp = temp // 10
-        x = x // math.pow(10, length // 2 + 1)
-    # return x == int(str(x)[::-1])
+        # if x = 12345654321, then return x = (12345654321 // 100000)
+        x = x // math.pow(10, half_len + 1)
+    return x == int(latter)
 
 
 def two_sum(nums, target):
@@ -294,4 +294,4 @@ if __name__ == '__main__':
 
     print(two_sum([2, 343, 32, 21, 4332, 4], 34))
 
-    print(is_palindrome(123321))
+    print(is_palindrome(123456754321))
