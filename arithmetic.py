@@ -4,7 +4,7 @@
 # @date    : 2018/6/11 20:22
 from collections import deque
 
-from numpy import random
+from numpy import random, math
 
 
 def is_amicable_number(num):
@@ -184,7 +184,20 @@ def is_palindrome(x):
     if x < 0:
         return False
     # TODO
-    return x == int(str(x)[::-1])
+    length = len(str(x))
+    latter = ""
+    temp = x
+    if length % 2 == 0:
+        for i in range(length // 2):
+            latter += str(temp % 10)
+            temp = temp // 10
+        x = x // math.pow(10, length // 2)
+    else:
+        for i in range(length // 2):
+            latter += str(temp % 10)
+            temp = temp // 10
+        x = x // math.pow(10, length // 2 + 1)
+    # return x == int(str(x)[::-1])
 
 
 def two_sum(nums, target):
@@ -281,4 +294,4 @@ if __name__ == '__main__':
 
     print(two_sum([2, 343, 32, 21, 4332, 4], 34))
 
-    print(is_match("", ""))
+    print(is_palindrome(123321))
