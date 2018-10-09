@@ -183,6 +183,8 @@ def is_palindrome(x):
     """
     if x < 0:
         return False
+    if x < 10:
+        return True
     # return x == int(str(x)[::-1])
     length = len(str(x))
     latter = ""
@@ -197,7 +199,7 @@ def is_palindrome(x):
     else:
         # if x = 12345654321, then return x = (12345654321 // 100000)
         x = x // math.pow(10, half_len + 1)
-    return x == int(latter)
+    return str(int(x)) == latter
 
 
 def two_sum(nums, target):
