@@ -277,6 +277,30 @@ def find_median_sorted_arrays(nums1, nums2):
     return median
 
 
+# learn generator by Fibonacci sequence
+def fib(num=1):
+    idx, first, second = 0, 0, 1
+    while idx < num:
+        # print(second)
+        yield second
+        first, second = second, first + second
+        idx += 1
+
+
+def yang_hui_triangle(floor=1):
+    idx, root = 0, [1]
+    while idx < floor:
+        print(root)
+        temp = 0
+        triangle = []
+        for i in root:
+            temp += i
+            triangle += [temp]
+            temp = i
+        root = triangle + [root[-1]]
+        idx += 1
+
+
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
@@ -316,3 +340,5 @@ if __name__ == '__main__':
     # print(is_palindrome(123456754321))
 
     print([1, 2, 3, 4] + [5, 6, 7, 8])
+    print([1, 2, 3, 4, 5, 6, 7][::-1])
+    print([i for i in fib(10)])
