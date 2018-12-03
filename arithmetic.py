@@ -290,7 +290,7 @@ def fib(num=1):
 def yang_hui_triangle(floor=1):
     idx, root = 0, [1]
     while idx < floor:
-        print(root)
+        yield root
         temp = 0
         triangle = []
         for i in root:
@@ -342,3 +342,4 @@ if __name__ == '__main__':
     print([1, 2, 3, 4] + [5, 6, 7, 8])
     print([1, 2, 3, 4, 5, 6, 7][::-1])
     print([i for i in fib(10)])
+    print([i for i in yang_hui_triangle(5)])
