@@ -258,6 +258,23 @@ def add(a: int, b: int) -> int:
     return a
 
 
+def find_median_sorted_arrays(nums1, nums2):
+    """
+    :type nums1: List[int]
+    :type nums2: List[int]
+    :rtype: float
+    """
+    merged_arr = quick_sort(nums1 + nums2)
+    length = len(merged_arr)
+    if length % 2 == 0:
+        # 1 2 3 4
+        median = 0.5 * (merged_arr[length / 2] + merged_arr[length / 2 - 1])
+    else:
+        # 1 2 3
+        median = merged_arr[length // 2 + 1]
+    return median
+
+
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
@@ -292,6 +309,8 @@ if __name__ == '__main__':
 
     # print(sorted_list)
 
-    print(two_sum([2, 343, 32, 21, 4332, 4], 34))
+    # print(two_sum([2, 343, 32, 21, 4332, 4], 34))
 
-    print(is_palindrome(123456754321))
+    # print(is_palindrome(123456754321))
+
+    print([1, 2, 3, 4] + [5, 6, 7, 8])
