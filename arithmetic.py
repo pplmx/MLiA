@@ -301,6 +301,10 @@ def yang_hui_triangle(floor=1):
         idx += 1
 
 
+def normalize(name):
+    return name.capitalize()
+
+
 if __name__ == '__main__':
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
@@ -343,3 +347,4 @@ if __name__ == '__main__':
     print([1, 2, 3, 4, 5, 6, 7][::-1])
     print([i for i in fib(10)])
     print([i for i in yang_hui_triangle(5)])
+    print(list(map(normalize, ["lina", "WEliNa", "LINA"])))
