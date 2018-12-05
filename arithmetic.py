@@ -3,6 +3,7 @@
 # @author  : mystic
 # @date    : 2018/6/11 20:22
 from collections import deque
+from functools import reduce
 
 from numpy import random, math
 
@@ -348,3 +349,4 @@ if __name__ == '__main__':
     print([i for i in fib(10)])
     print([i for i in yang_hui_triangle(5)])
     print(list(map(normalize, ["lina", "WEliNa", "LINA"])))
+    print(reduce(lambda x, y: x * 10 + y, [1, 3, 5, 7, 9]))
