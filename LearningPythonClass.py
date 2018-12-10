@@ -66,7 +66,7 @@ def write(queue: Queue):
     for val in ['A', 'B', 'C']:
         print('Put %s to queue...' % val)
         queue.put(val)
-        time.sleep(random.random)
+        time.sleep(random.random())
 
 
 def read(queue: Queue):
