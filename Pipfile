@@ -1,13 +1,13 @@
 [[source]]
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-verify_ssl = true
 name = "pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+verify_ssl = true
+
+[dev-packages]
 
 [packages]
 numpy = "*"
-nanotime = "*"
-
-[dev-packages]
+aiohttp = "*"
 
 [requires]
 python_version = "3.6"

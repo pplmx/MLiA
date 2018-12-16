@@ -12,6 +12,12 @@ def hello():
     print('Hello again!')
 
 
+async def hello_new_grammar():
+    print('Hello World!')
+    await asyncio.sleep(1)
+    print('Hello again!')
+
+
 loop = asyncio.get_event_loop()
 loop.run_until_complete(hello())
 loop.close()
