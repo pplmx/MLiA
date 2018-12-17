@@ -19,5 +19,5 @@ async def hello_new_grammar():
 
 
 loop = asyncio.get_event_loop()
-loop.run_until_complete(hello())
+loop.run_until_complete(hello_new_grammar())
 loop.close()
