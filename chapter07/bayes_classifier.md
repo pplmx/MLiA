@@ -11,3 +11,6 @@
         * 贝叶斯学派(Bayesian)认为参数是未观察到的随机变量, 其本身也可有分布, 因此可假定<br/>
         参数服从一个先验分布, 然后基于观测到的数据来计算参数的后验分布<br/>
 ## 朴素贝叶斯分类器(Naive Bayes Classifier)
+    朴素贝叶斯分类器采用了"属性条件独立性假设"<br/>
+    (attribute conditional independence assumption):<br/>
+        对于已知类别, 假设所有属性相互独立. 换言之, 假设每个属性独立地对分类结果发生影响
