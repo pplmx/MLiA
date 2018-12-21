@@ -14,3 +14,4 @@
     朴素贝叶斯分类器采用了"属性条件独立性假设"<br/>
     (attribute conditional independence assumption):<br/>
         对于已知类别, 假设所有属性相互独立. 换言之, 假设每个属性独立地对分类结果发生影响
+## 半朴素贝叶斯分类器(semi-naive Bayes classifiers)
