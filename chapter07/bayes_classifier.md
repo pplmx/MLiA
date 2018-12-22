@@ -15,3 +15,4 @@
     (attribute conditional independence assumption):<br/>
         对于已知类别, 假设所有属性相互独立. 换言之, 假设每个属性独立地对分类结果发生影响
 ## 半朴素贝叶斯分类器(semi-naive Bayes classifiers)
+    "独依赖估计"(One-Dependent Estimator, ODE)是半朴素贝叶斯分类器最常用的一种策略.
