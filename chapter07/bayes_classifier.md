@@ -17,3 +17,4 @@
 ## 半朴素贝叶斯分类器(semi-naive Bayes classifiers)
     "独依赖估计"(One-Dependent Estimator, ODE)是半朴素贝叶斯分类器最常用的一种策略.
 ## 贝叶斯网(Bayes network)
+    亦称"信念网"(belief network)
