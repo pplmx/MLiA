@@ -127,10 +127,11 @@ def quick_sort(array):
     arr_len = len(array)
     if arr_len <= 1:
         return array
-    # num = array[0]
-    num = array[random.randint(arr_len)]
-    less = [i for i in array[1:] if i <= num]
-    greater = [i for i in array[1:] if i > num]
+    rand_val = random.randint(arr_len)
+    num = array[rand_val]
+    del array[rand_val]
+    less = [i for i in array if i <= num]
+    greater = [i for i in array if i > num]
     return quick_sort(less) + [num] + quick_sort(greater)
 
 
