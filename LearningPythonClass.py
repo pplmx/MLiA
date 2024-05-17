@@ -14,7 +14,6 @@ logging.basicConfig(level=logging.INFO)
 
 
 class Student(object):
-
     def __init__(self, name):
         self.__name = name
 
@@ -50,55 +49,55 @@ class Weekday(Enum):
 
 
 def run(name):
-    print('Run child process %s (%s)' % (name, os.getpid()))
+    print("Run child process %s (%s)" % (name, os.getpid()))
 
 
 def long_time_task(name):
-    print('Run task %s (%s)' % (name, os.getpid()))
+    print("Run task %s (%s)" % (name, os.getpid()))
     start = time.time()
     time.sleep(random.random() * 3)
     end = time.time()
-    print('Task %s runs %0.2f seconds.' % (name, (end - start)))
+    print("Task %s runs %0.2f seconds." % (name, (end - start)))
 
 
 def write(queue: Queue):
-    print('Process to write: %s' % os.getpid())
-    for val in ['A', 'B', 'C']:
-        print('Put %s to queue...' % val)
+    print("Process to write: %s" % os.getpid())
+    for val in ["A", "B", "C"]:
+        print("Put %s to queue..." % val)
         queue.put(val)
         time.sleep(random.random())
 
 
 def read(queue: Queue):
-    print('Process to read: %s' % os.getpid())
+    print("Process to read: %s" % os.getpid())
     while True:
         val = queue.get(True)
-        print('Get %s from queue.' % val)
+        print("Get %s from queue." % val)
 
 
 if __name__ == "__main__":
-    print('Parent process %s.' % os.getpid())
+    print("Parent process %s." % os.getpid())
     # create a child process
-    p = Process(target=run, args=('test',))
-    print('Child process will start.')
+    p = Process(target=run, args=("test",))
+    print("Child process will start.")
     # start child process
     p.start()
     p.join()
-    print('Child process end.')
+    print("Child process end.")
     print("==========================================")
     # default value is your CPU cores, mine is 4(Pool()<=>Pool(4)[On My Computer])
     p = Pool(5)
     for i in range(5):
         p.apply_async(long_time_task, args=(i,))
-    print('Waiting for all sub-processes done...')
+    print("Waiting for all sub-processes done...")
     p.close()
     p.join()
-    print('All sub-processes done.')
-    print('==========================================')
-    print('nslookup baidu.com')
-    r = subprocess.call(['nslookup', 'baidu.com'])
-    print('Exit code %s' % r)
-    print('==========================================')
+    print("All sub-processes done.")
+    print("==========================================")
+    print("nslookup baidu.com")
+    r = subprocess.call(["nslookup", "baidu.com"])
+    print("Exit code %s" % r)
+    print("==========================================")
     # create Queue
     queue_ = Queue()
     proc_w = Process(target=write, args=(queue_,))

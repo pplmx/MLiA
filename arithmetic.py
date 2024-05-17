@@ -93,7 +93,10 @@ def selection_sort(unordered_set):
                 assume_max_idx = j
                 max_val = unordered_set[assume_max_idx]
         # change each other
-        unordered_set[i], unordered_set[assume_max_idx] = unordered_set[assume_max_idx], unordered_set[i]
+        unordered_set[i], unordered_set[assume_max_idx] = (
+            unordered_set[assume_max_idx],
+            unordered_set[i],
+        )
     # for clear semantics
     ordered_list = unordered_set
     return ordered_list
@@ -110,7 +113,10 @@ def insertion_sort(unordered_set):
         # Use slices to implement reverse traversal
         for j in range(i)[::-1]:
             if unordered_set[j + 1] < unordered_set[j]:
-                unordered_set[j], unordered_set[j + 1] = unordered_set[j + 1], unordered_set[j]
+                unordered_set[j], unordered_set[j + 1] = (
+                    unordered_set[j + 1],
+                    unordered_set[j],
+                )
             else:
                 break
     # for clear semantics
@@ -238,11 +244,12 @@ def is_match(text, pattern):
 
     # if text is not empty string, and the first character of pattern is the first of text or '.'
     # return true
-    first_match = bool(text) and pattern[0] in {text[0], '.'}
+    first_match = bool(text) and pattern[0] in {text[0], "."}
 
-    if len(pattern) >= 2 and pattern[1] == '*':
-        return (is_match(text, pattern[2:]) or
-                first_match and is_match(text[1:], pattern))
+    if len(pattern) >= 2 and pattern[1] == "*":
+        return (
+            is_match(text, pattern[2:]) or first_match and is_match(text[1:], pattern)
+        )
     else:
         return first_match and is_match(text[1:], pattern[1:])
 
@@ -307,7 +314,7 @@ def normalize(name):
     return name.capitalize()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # amicable_pair_in_range(3000)
     # seek_amicable(3000)
 

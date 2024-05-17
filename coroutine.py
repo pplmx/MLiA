@@ -7,15 +7,15 @@ import asyncio
 
 @asyncio.coroutine
 def hello():
-    print('Hello World!')
+    print("Hello World!")
     yield from asyncio.sleep(1)
-    print('Hello again!')
+    print("Hello again!")
 
 
 async def hello_new_grammar():
-    print('Hello World!')
+    print("Hello World!")
     await asyncio.sleep(1)
-    print('Hello again!')
+    print("Hello again!")
 
 
 loop = asyncio.get_event_loop()

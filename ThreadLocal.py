@@ -12,7 +12,7 @@ local_school = threading.local()
 def process_student():
     # get student info on current thread
     stu = local_school.student
-    print('Hello, %s ( in %s ).' % (stu, threading.current_thread().name))
+    print("Hello, %s ( in %s )." % (stu, threading.current_thread().name))
 
 
 def process_thread(name):
@@ -27,5 +27,3 @@ if __name__ == "__main__":
     t2.start()
     t1.join()
     t2.join()
-
-
