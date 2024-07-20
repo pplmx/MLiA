@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 # @author  : mystic
 # @date    : 2018/6/11 20:22
+import math
 from collections import deque
 from functools import reduce
 
-from numpy import math, random
+from numpy import random
 
 
 def is_amicable_number(num):
