@@ -5,7 +5,7 @@
 from collections import deque
 from functools import reduce
 
-from numpy import random, math
+from numpy import math, random
 
 
 def is_amicable_number(num):

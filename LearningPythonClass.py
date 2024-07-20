@@ -8,7 +8,7 @@ import random
 import subprocess
 import time
 from enum import Enum, unique
-from multiprocessing import Process, Pool, Queue
+from multiprocessing import Pool, Process, Queue
 
 logging.basicConfig(level=logging.INFO)
 

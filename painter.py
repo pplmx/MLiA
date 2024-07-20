@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # @author  : mystic
 # @date    : 12/13/2018 21:21
-import turtle as t
 import math as m
+import turtle as t
 
 t.pensize(4)  # 设置画笔的大小
 t.colormode(255)  # 设置GBK颜色范围为0-255
