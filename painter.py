@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # @author  : mystic
 # @date    : 12/13/2018 21:21
 import math as m

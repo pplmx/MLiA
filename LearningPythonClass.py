@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # @author  : mystic
 # @date    : 2018/12/6 20:54
 import logging
@@ -13,7 +12,7 @@ from multiprocessing import Pool, Process, Queue
 logging.basicConfig(level=logging.INFO)
 
 
-class Student(object):
+class Student:
     def __init__(self, name):
         self.__name = name
 
